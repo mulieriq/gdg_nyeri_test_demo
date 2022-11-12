@@ -6,6 +6,9 @@ generage_coverage:
 	genhtml coverage/lcov.info -o coverage/html
 open_coverage_results:	
 	open coverage/html/index.html
+gpg:
+	 export GPG_TTY=$(tty)                    	
+
 # run:
 # 	flutter run  
 	
