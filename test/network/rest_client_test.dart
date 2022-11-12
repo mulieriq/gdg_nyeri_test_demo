@@ -13,7 +13,7 @@ void main() {
 
     test(
       """Given an instance of Rest client [none-mocked]
-      When Restclient is intantieted
+      When Restclient is instantiated
       Then a Dio instance is returned""",
       () async {
         var dio = restClient.dio;
@@ -23,7 +23,7 @@ void main() {
 
     test(
       """Given an intance of Rest Client [none-mocked]
-      When Restclient is intantieted
+      When Restclient is instantiated
            Then a Dio instance is returned with option
        """,
       () async {
@@ -46,7 +46,7 @@ void main() {
 
     test(
       """Given an intance of Rest Client [none-mocked]
-      When Restclient is intantieted
+      When Restclient is instantiated
            Then a Dio instance is returned with http formatter in dev mode
        """,
       () async {
@@ -64,7 +64,7 @@ void main() {
 
     test(
       """Given an intance of Rest Client [none-mocked]
-      When Restclient is intantieted
+      When Restclient is instantiated
       Then a Dio instance is returned with extra-options
        """,
       () async {
@@ -85,7 +85,7 @@ void main() {
 
     test(
       """Given an intance of Rest Client [none-mocked]
-      When Rest-client is intantieted
+      When Rest-client is instantiated
       Then a Dio instance is returned with  Authorization Bearer and tokemn
        """,
       () async {

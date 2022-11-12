@@ -3,6 +3,7 @@ import 'package:gdg_nyeri_demo/network/network_service_impl.dart';
 
 import '../mocks/mocks.dart';
 
+// ignore: constant_identifier_names
 const BASE_URL = 'someurl';
 void main() {
   late MockRestClient mockRestClient;

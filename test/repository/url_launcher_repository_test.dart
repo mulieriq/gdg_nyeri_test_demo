@@ -8,7 +8,7 @@ import '../mocks/mocks.dart';
 final uri = Uri.parse('testurl.com');
 void main() {
   late UrlLauncherRepository sut;
-  late MockUrlLauncherService mockUrlLauncherService;
+  late UrlLauncherService mockUrlLauncherService;
   setUp(() {
     mockUrlLauncherService = MockUrlLauncherService();
 
@@ -29,11 +29,19 @@ void main() {
         verify(() => mockUrlLauncherService.launch(uri: uri)).called(1);
       },
     );
+
+    test(
+      'accepts instance of $UrlLauncherService ',
+      () async {
+        expect(sut.urlLauncherWrapper, isA<UrlLauncherService>());
+      },
+    );
     test(
       'throw $UrlLaunchFailure when $UrlLauncherService.launch '
       'can not launch',
       () async {
-        when(() => mockUrlLauncherService.launch(uri: uri)).thenThrow(
+        when(() => mockUrlLauncherService.launch(uri: any(named: 'uri')))
+            .thenThrow(
           UrlLaunchFailure(),
         );
 
